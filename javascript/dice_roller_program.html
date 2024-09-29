@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+   #container{
+    font-family:  sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold ;
+   }
+   button{
+    font-size: 1rem;
+    padding : 10px 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+   }
+
+   button:hover{
+    background-color: rgb(89, 131, 238);
+   }
+  button:active{
+           background-color: rgb(82, 172, 233);
+  }
+
+  input{
+    font-size: 2rem;
+    width: 60px;
+    text-align: center;
+    font-weight: bold;
+
+  }
+
+
+</style>
+<body>
+   <div id ="container">
+      <h1>Dice Roller </h1>
+      <label for=""># of dice </label>
+      <input type="number" id="numOfDice">
+      <button onclick="rollDice()">Roll Dice </button>
+      <div id="diceResult"></div>
+      <div id="diceImage"></div>
+
+   </div>
+</body>
+<script>
+function rollDice(){
+  const numOfDice = document.getElementById("numOfDice").value ;
+
+  const diceResult = document.getElementById("diceResult");
+  const diceImage = document.getElementById("diceImage");
+  const values = [];
+  const images = [] ;
+
+  for(let i = 0 ; i < numOfDice ; i++){
+    const value = Math.floor(Math.random()* 6 ) + 1 ;
+   // console.log(value ) ;
+   values.push(value);
+   images.push(`<img src="dice.png"  alt = "Dice" ${value}>`);
+
+  }
+  //console.log(values ) ;
+  diceResult.textContent = `dice : ${values.join(',')}`;
+  diceImage.inerHTML = images.join(' ');
+
+}
+</script>
+</html>

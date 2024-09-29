@@ -1,0 +1,67 @@
+<!-- rest parameters = (...rest)  alllow a function work with a variable number of arguments by bundling them into array 
+
+spread == expand an array into separate element 
+rest === bundles separate element into array -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+const food1  = "pizza";
+const food2  = "abx";
+const food3  = "pi";
+
+function openFridge(...foods )
+{
+  console.log(...foods);
+}
+
+function getFood(...foods){
+  return foods ;
+}
+//openFridge(food1 ,food2, food3);
+
+const foods = getFood(food1 , food2 ,food3);
+console.log(foods);
+//exmaple 2 
+       
+
+function sum(...numbers){
+  let result = 0 ;
+  for(number of numbers ){
+    result += number ;
+  }
+
+  return result ;
+
+}
+let total = sum(1 ,2 ,4, 5 ,566  ,67, 67 ,);
+console.log(`your total is $${total}`);
+
+// function average(){
+//   let result = 0 ;
+//   for(number of numbers ){
+//     result += number ;
+//   }
+
+//   return result / numbers.length ;
+// }
+// let average1 = average(1 ,2 ,4, 5 ,566  ,67, 67 );
+// //console.log(`your average is $${average1}`);
+// exmaple 3 
+
+
+function combineStirngs(...strings){
+         return strings.join(" ");
+}
+   const fullName = combineStirngs( "MR" , "Sumit " , " sangale " , " idiot ");
+console.log(fullName);
+</script>
+</html>

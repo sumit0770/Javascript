@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+  }
+  #mySubmit{
+    font-size: 1em;
+  }
+</style>
+<body>
+  <input type="checkbox" id="myCheckBox">
+  <label for="myCheckBox">Subsribe</label><br><br>
+   // Name attribute is used so we can only select one radio button at a time 
+  <input type="radio" id="visaBtn" name="card">
+  <label for="visaBtn">Visa</label><br>
+
+  <input type="radio" id="masterCard" name="card">
+  <label for="masterCard">Mastercard</label><br>
+
+  <input type="radio" id="payPalBtn" name="card">
+  <label for="payPalBtn">Paypal</label><br><br>
+
+  <button type="submit" id="mySubmit"> Submit</button>
+
+  <p id="subResult"></p>
+  <p id="payResult"></p>
+
+</body>
+<script>
+  const myCheckBox = document.getElementById("myCheckBox");
+  
+  const visaBtn = document.getElementById("visaBtn");
+  const masterCard = document.getElementById("masterCard");
+  const payPalBtn = document.getElementById("payPalBtn");
+  const mySubmit = document.getElementById("mySubmit");
+  const subResult = document.getElementById("subResult");
+  const payResult = document.getElementById("payResult");
+  
+  mySubmit.onclick = function(){
+     
+    if(myCheckBox.checked){
+         subResult.textContent = `You are subscribed`;
+    }
+    else{
+      subResult.textContent = `your are NOT subscribed`;
+    }
+
+    if(visaBtn.checked){
+       payResult.textContent = `your are paying through visaa`;
+  }
+  else if (masterCard.checked){
+    payResult.textContent = `your are paying through master card`;
+  }
+
+  else if (payPalBtn.checked){
+    payResult.textContent = `your are paying through pay pal `;
+  }
+  else {
+    payResult.textContent = `pls select the payment option `;
+  }
+
+  } 
+
+  
+
+
+</script>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body><script>
+  /*
+
+  array  =  a variable like structure that can hold more than one value  .
+
+  
+  */
+ let fruits  = ["apple", "orange" ,"banana"  ];
+ fruits.push("coconut");    // add the element at the last spot of the array 
+ fruits.pop();                 // it is gonna remove the last element from the array 
+ fruits.unshift("mango")         // it is gonna add the element at the sstart of the array 
+ fruits.shift() ;                 // removes the element from the start of the arrray 
+ console.log(fruits);   
+
+
+ let numOfElement  =  fruits.length;    // there os no need to addd the cicular braces it will show error fr length
+ console.log(numOfElement);
+
+
+ //let index  = fruits.indexOf("apple");
+ let index  = fruits.indexOf("mango");
+ console.log(index);
+
+for(let i = 0 ; i< fruits.length ; i++){
+  console.log(fruits[i]);
+}
+
+ fruits.sort().reverse();
+ console.log(fruits);
+
+ for(let fruit of fruits){
+  console.log(fruit);
+ }
+
+</script>
+</html>

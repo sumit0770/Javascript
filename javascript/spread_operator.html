@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  /*
+  SPREad operator     = =      ...   allows an itreable such as an array string to be expanded to sperate elements (unpack the element)
+
+
+  Here threee dots are the syntax for the spread operator 
+  */
+
+  let numbers  = [ 1 , 2,3 ,4 ,5 ,6 ];
+
+  let maximum = Math.max(...numbers);
+  let minimum = Math.min(...numbers);
+
+
+console.log(maximum);
+console.log(minimum);
+
+let username  = "MrCocane";
+let letter  = [...username].join("-");
+console.log(letter);
+
+
+
+let fruits = ["apple" , "mango" , "gavua"];
+//let newFruits = [...fruits];
+let vegetables = ["methi" , "chavli" , "muttor"];
+
+let food = [...fruits,...vegetables, "eggs" , "milk"].sort().reverse();
+console.log(food);
+console.log(food.length);
+</script>
+</html>

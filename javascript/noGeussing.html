@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  
+
+</style>
+<body>
+  <form action="">
+  <h1 id="myText">Enter the guessed number</h1>
+  <input type="text" id="myInput"><br>
+  <label for="myInput"></label>
+  <button id="myButton" onclick="run()">Click me</button>
+  <p id="result"></p>
+  </form>
+  <!-- <script>
+    const minNum = 1;
+    const maxNum = 100;
+    const answer = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+    // Generalised equation for the random no genratetion between max and min values given 
+    const myInput = document.getElementById("myInput");
+    const myText = document.getElementById("myText");
+    const myButton = document.getElementById("myButton");
+    const result = document.getElementById("result");
+    console.log(answer);
+
+    let attempt = 0;
+    let running = true;
+
+    function run() { 
+      if(running)
+  {attempt++;
+  let guess = myInput.value;
+  guess = Number(guess);
+
+  if (isNaN(guess)) {
+    myText.textContent = "Please enter a valid input";
+  } else if (guess > maxNum || guess < minNum) {
+    myText.textContent = "Please enter a valid input";
+  } else {
+    if (guess > answer) {
+      myText.textContent = "Too high!! Please try again";
+    } else if (guess < answer) {
+      myText.textContent = "Too low!! Please try again";
+    } else {
+      myText.textContent = `Hooray!! Correct answer. You took ${attempt} attempts`;
+      running = false;
+    }
+  }
+}
+     else
+     { result.textContent = `Your guess: ${guess}`;}
+    }
+  </script> -->
+</body>
+<script>
+  const minNum = 1;
+  const maxNum = 100;
+  const answer = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+  // Generalised equation for the random no genratetion between max and min values given 
+  const myInput = document.getElementById("myInput");
+  const myText = document.getElementById("myText");
+  const myButton = document.getElementById("myButton");
+  const result = document.getElementById("result");
+  console.log(answer);
+
+  let attempt = 0;
+  let guess ;
+  let running = true;
+
+  function run() { 
+    while(running)
+{attempt++;
+ guess = myInput.value;
+guess = Number(guess);
+
+if (isNaN(guess)) {
+  myText.textContent = "Please enter a valid input";
+} else if (guess > maxNum || guess < minNum) {
+  myText.textContent = "Please enter a valid input";
+} else {
+  if (guess > answer) {
+    myText.textContent = "Too high!! Please try again";
+  } else if (guess < answer) {
+    myText.textContent = "Too low!! Please try again";
+  } else {
+    myText.textContent = `Hooray!! Correct answer. You took ${attempt} attempts`;
+    running = false;
+  }
+}
+}
+  
+  }
+</script>
+</html>

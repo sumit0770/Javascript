@@ -1,0 +1,57 @@
+.map method  = accepts a callback and applies that functuin to each element of an array then return a new  array 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html>
+<script>
+   const numbers = [ 1 , 2 ,3, 4 ,5 ];
+    const squares=  numbers.map(square) ;
+    const cubes   = numbers.map(cube);
+    //console.log(squares);
+    //console.log(cubes)
+
+
+   function square(element){
+     return Math.pow(element , 2 ) ;
+   
+   }
+
+   function cube(element){
+    return Math.pow(element , 3 ) ;
+   }
+
+
+   //example 2 
+   const students = ["sumit ", "neha " , "ipm"] ;
+     const studentsup = students.map(uppercase) ;
+
+     console.log(studentsup);
+
+
+   function uppercase(element){
+    return element.toUpperCase() ;
+   }
+
+   //example 3 
+
+   const date = ["2024-1-10", "2025-2-20" ,"2026-3-30"];
+    const formattedDates = date.map(formatDates);
+
+    console.log(formattedDates);
+   function formatDates(element){ 
+    const parts = element.split("-");
+
+    return `${parts[1]}/${parts[0]}/${parts[2]}`;
+
+   }
+   // similar to callback but at the end givee result in new array rather preserving the previous array 
+
+
+</script>

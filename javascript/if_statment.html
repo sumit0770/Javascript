@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <label for="">Enter your age </label><br>
+  <input type="text" id="myText"><br>
+  <button type="submit" id="myButton">Submit</button>
+  <p id="resultElement"></p>
+</body>
+<script>
+   const myText = document.getElementById("myText");
+   const mySubmit = document.getElementById("myButton");
+    const resultElement = document.getElementById("resultElement");
+  let age  ;
+
+  mySubmit.onclick = function(){
+    age = myText.value ;
+    age = Number(age );
+
+  if(age >= 100){
+    
+    resultElement.textContent = `your are too old to enter the website `;
+  }
+  else if ( age == 0 ){
+    resultElement.textContent = `your are to old to enter the website `;
+  }
+  else if ( age>= 18 ){
+    resultElement.textContent = `your are to old to enter the website `;
+    
+  }
+  else {
+    resultElement.textContent = `your are to old to enter the website `;
+  }
+
+  }
+
+</script>
+</html>

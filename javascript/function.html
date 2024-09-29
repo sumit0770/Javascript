@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  // function = a set of reusable c0de declare code once use whwneever you wwant to use it 
+  let x = 2 ;
+  let y = 4 ;
+  function add(x,y){
+    return x+y ;
+  }
+  function sub(x,y){
+    return x- y ;
+  }
+  function multiply(x,y){
+    return x*y;
+  }
+  function   divide(x,y){
+    if(y !== 0 ){
+      return x/y ;
+    }
+    else{
+      return false ;
+    }
+  }
+
+  function isEven(number) {
+    return number % 2 === 0 ? true : false ;
+  }
+
+  function isValidEmail(mail) {
+    return   mail.includes("@") ? true : false ;
+  }
+
+  console.log(isValidEmail("sangale@gmail.com"));
+  console.log(divide(34, 0 ));
+  add(2 , 4);
+
+</script>
+</html>

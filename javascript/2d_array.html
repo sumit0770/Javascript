@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  // 2d arrays = multidimensonal array that stores aa matrix of data in rows and coulmns 
+  // useful for games spreadsheet or representing images 
+  const matrix = [[1 ,2 ,3 ], 
+                 [ 4 ,5 ,6 ],
+                 [ 7 ,8 ,9 ]
+               ];
+
+
+  matrix[0][0] = 'x';
+
+
+  for(let row of matrix ){
+    const rowString = row.join(' ');
+    console.log(rowString);
+  }
+
+
+</script>
+</html>
