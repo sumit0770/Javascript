@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+// .filter()  == creates new array by filtering out elements 
+
+let numbers = [ 1 ,2 ,3 ,4 ,5 ,6, ,7 ]  ;
+let oddNumbers  = numbers.filter(evenNums); 
+
+let evenNumbers  = numbers.filter(oddNums); 
+ function evenNums( element) {
+   return element  % 2 === 0 ;
+}
+function  oddNums( element ) {
+  return element % 2 !== 0  ;
+}
+console.log(evenNumbers);
+console.log(oddNumbers) ;
+
+
+// example  : consider an example where you are given ages 10 , 35 ,45 ,3,23 ,43 ,56,67 , 87  you need to create a array such that it contains only ages >= 18 ( adult )  and another as only less than 18 by filter method 
+
+const ages = [10 , 35 ,45 ,3,23 ,43 ,56,67 , 87  ] ; 
+const adultAge =  ages.filter( adults);
+const  childrenAge = ages.filter( childrens) ;
+
+console.log( adultAge) ;
+console.log( childrenAge) ;
+
+function adults( element) {
+  return element>= 18  ;
+}
+function  childrens( element) {
+  return element < 18 ; 
+}
+
+
+// Example 2 : 
+//let us consider the  the fruits ( "apple" , "orange" , "banana" , "kiwi" , "mango" , "pomogrenate") so make array such that the length of fruits  name consist less than 6 or equal to letters using filter ==>
+
+const fruits = ["apple" , "orange" , "banana" , "kiwi" , "mango" , "pomogrenate"] ;
+const desireFruit = fruits.filter(isLength) ;
+
+function isLength( element) {
+  return element.length <= 6 ; 
+}
+console.log(desireFruit) ;
+
+
+                                  // <=== Thats all for the filters ==>
+</script>
+</html>
